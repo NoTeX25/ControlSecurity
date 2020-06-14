@@ -1,3 +1,4 @@
+import 'package:ControlSecurity/dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,6 +32,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+//controllers will be stored here
+PageController _controller = PageController(
+  initialPage: 0,
+  );
+
+
+
 //create container widgets here:
 Widget _buildTopTransition(){
   return SizedBox.expand(
@@ -49,10 +57,21 @@ Widget _buildTopTransition(){
 Widget _buildBottomTransition(){
   return Container(
     color: Colors.green[700],
+    child: Image(
+      image: AssetImage('assets/images/cs-black.png'),
+    ),
   );
 }
 
   @override
+  //dispose of the controller state with onDispose()
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
+
+  
+
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -65,12 +84,20 @@ Widget _buildBottomTransition(){
         title: Text(widget.title),
       ),
       body: Center(
-        child: Stack(
+        /* child: Stack(
           children: <Widget>[
             //stack container widgets here bottom to top
             _buildBottomTransition(),
             _buildTopTransition(),
           ],
+        ), */
+        child: PageView(
+          controller: _controller,
+          scrollDirection: Axis.vertical,
+          children: [
+            _buildTopTransition(),
+            Dashboard(),
+          ]
         ),
       )
     );
