@@ -12,7 +12,6 @@ class ControlSecurity extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: Colors.black,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: ''),
     );
@@ -34,9 +33,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
 //create container widgets here:
 Widget _buildTopTransition(){
-  return Container(
-    color: Colors.black,
-    child: Image.asset("assets/images/cs-green.png"),
+  return SizedBox.expand(
+    child: Container(
+      color: Colors.black,
+      child: Image(
+        image: AssetImage('assets/images/cs-green.png'),
+      ),
+    ),
+    /* color: Colors.black,
+    child: Image.asset("assets/images/cs-green.png"), */
+
     //green logo goes here
   );
 }
