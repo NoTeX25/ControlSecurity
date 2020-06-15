@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 
 
-class Dashboard extends StatefulWidget{
+class ConmonTracking extends StatefulWidget{
 
 
   @override
   State<StatefulWidget> createState(){
-    return DashboardState();
+    return ConmonTrackingState();
   }
 }
 
 
-
-//basic skeleton of buttons used for dashboard
-
-
-class DashboardState extends State<Dashboard>{
+class ConmonTrackingState extends State<ConmonTracking>{
 
   @override
   Widget build(BuildContext context){

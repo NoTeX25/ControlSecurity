@@ -48,21 +48,8 @@ Widget _buildTopTransition(){
         image: AssetImage('assets/images/cs-green.png'),
       ),
     ),
-    /* color: Colors.black,
-    child: Image.asset("assets/images/cs-green.png"), */
-
-    //green logo goes here
   );
 }
-Widget _buildBottomTransition(){
-  return Container(
-    color: Colors.green[700],
-    child: Image(
-      image: AssetImage('assets/images/cs-black.png'),
-    ),
-  );
-}
-
   @override
   //dispose of the controller state with onDispose()
   void dispose(){
@@ -99,6 +86,7 @@ Widget _buildBottomTransition(){
             Dashboard(),
           ]
         ),
+        
       )
     );
   }

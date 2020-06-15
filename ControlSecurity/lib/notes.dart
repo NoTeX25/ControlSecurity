@@ -1,21 +1,17 @@
 import 'package:flutter/material.dart';
 
 
-class Dashboard extends StatefulWidget{
+class Notes extends StatefulWidget{
 
 
   @override
   State<StatefulWidget> createState(){
-    return DashboardState();
+    return NotesState();
   }
 }
 
 
-
-//basic skeleton of buttons used for dashboard
-
-
-class DashboardState extends State<Dashboard>{
+class NotesState extends State<Notes>{
 
   @override
   Widget build(BuildContext context){
