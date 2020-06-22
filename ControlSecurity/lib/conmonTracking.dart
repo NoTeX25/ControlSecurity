@@ -17,7 +17,7 @@ class ConmonTrackingState extends State<ConmonTracking>{
   Widget build(BuildContext context){
     return Scaffold(
       body: Container(
-        color: Colors.yellow,
+        color: Colors.purple,
       ),
     );
   }

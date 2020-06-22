@@ -17,7 +17,7 @@ class NotesState extends State<Notes>{
   Widget build(BuildContext context){
     return Scaffold(
       body: Container(
-        color: Colors.yellow,
+        color: Colors.blue,
       ),
     );
   }

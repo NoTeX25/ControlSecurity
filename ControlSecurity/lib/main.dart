@@ -69,6 +69,7 @@ Widget _buildTopTransition(){
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        
       ),
       body: Center(
         /* child: Stack(
