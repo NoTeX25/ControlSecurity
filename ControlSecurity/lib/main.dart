@@ -10,7 +10,6 @@ class ControlSecurity extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primaryColor: Colors.black,
       ),
@@ -67,10 +66,6 @@ Widget _buildTopTransition(){
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        
-      ),
       body: Center(
         /* child: Stack(
           children: <Widget>[

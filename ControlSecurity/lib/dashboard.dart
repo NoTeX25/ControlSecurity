@@ -20,6 +20,7 @@ class DashboardState extends State<Dashboard>{
         length: choices.length,
         child: Scaffold(
           appBar: AppBar(
+            backgroundColor: Colors.black,
             bottom: TabBar(
               isScrollable: true,
               tabs: choices.map((Choice choice){
