@@ -12,15 +12,21 @@ class BottomNav extends StatefulWidget{
 }
 
 
+
+
 class BottomNavState extends State<BottomNav>{
+  int _currentIndex = 0;
+  final List<Widget> _children = [];
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Bottom Navigation Bar')
-      ),
+      backgroundColor: Colors.black,
+      body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0, // this is set when the new tab is tapped
+        onTap: onTabTapped,
+        backgroundColor: Colors.green,
+        currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
             icon: new Icon(Icons.note),
@@ -37,5 +43,11 @@ class BottomNavState extends State<BottomNav>{
         ],
       ),
     );
+  }
+
+  void onTabTapped(int index){
+    setState((){
+      _currentIndex = index;
+    });
   }
 }
