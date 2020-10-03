@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import './placeholder_widget.dart';
+import './dashboard.dart';
 import './conmonTracking.dart';
 import './notes.dart';
 
@@ -16,7 +18,11 @@ class BottomNav extends StatefulWidget{
 
 class BottomNavState extends State<BottomNav>{
   int _currentIndex = 0;
-  final List<Widget> _children = [];
+  final List<Widget> _children = [
+    Dashboard(),
+    PlaceholderWidget(Colors.black),
+    PlaceholderWidget(Colors.black)
+  ];
 
   @override
   Widget build(BuildContext context){
@@ -29,12 +35,12 @@ class BottomNavState extends State<BottomNav>{
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
-            icon: new Icon(Icons.note),
-            title: new Text('Notes'),
-          ),
-          BottomNavigationBarItem(
             icon: new Icon(Icons.home),
             title: new Text('Home'),
+          ),
+          BottomNavigationBarItem(
+            icon: new Icon(Icons.note),
+            title: new Text('Notes'),
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.calendar_today),
