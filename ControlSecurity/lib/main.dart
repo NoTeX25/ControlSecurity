@@ -1,4 +1,5 @@
-import 'package:ControlSecurity/dashboard.dart';
+import 'package:ControlSecurity/bottomNav.dart';
+import 'package:ControlSecurity/bottomNav.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -79,7 +80,7 @@ Widget _buildTopTransition(){
           scrollDirection: Axis.vertical,
           children: [
             _buildTopTransition(),
-            Dashboard(),
+            BottomNav(),
           ]
         ),
         
