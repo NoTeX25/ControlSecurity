@@ -12,7 +12,8 @@ class Dashboard extends StatefulWidget{
 
 
 class DashboardState extends State<Dashboard>{
-  
+
+
   Material tileList(IconData icon, String heading, int color){
     return Material(
       color: Colors.green,
@@ -45,7 +46,7 @@ class DashboardState extends State<Dashboard>{
                         child: Icon(
                           icon,
                           color: Colors.white,
-                          size: 40.0,
+                          size: 60.0,
                         ),
                       ),
                     ),
@@ -58,7 +59,7 @@ class DashboardState extends State<Dashboard>{
       ),
     );
   }
-  
+
   @override
   Widget build(BuildContext context){ 
     return Scaffold(
@@ -77,12 +78,16 @@ class DashboardState extends State<Dashboard>{
         tileList(Icons.graphic_eq,"Test1", 0xff000000),
         tileList(Icons.graphic_eq,"Test2", 0xff000000),
         tileList(Icons.graphic_eq,"Test3", 0xff000000),
+        tileList(Icons.graphic_eq,"Test4", 0xff000000),
+        tileList(Icons.graphic_eq,"Test5", 0xff000000),
       ],
       staggeredTiles: [
         StaggeredTile.extent(2, 180.0),
         StaggeredTile.extent(1, 160.0),
         StaggeredTile.extent(1, 160.0),
         StaggeredTile.extent(2, 180.0),
+        StaggeredTile.extent(1, 160.0),
+        StaggeredTile.extent(1, 160.0),
       ],
       ),
     );
