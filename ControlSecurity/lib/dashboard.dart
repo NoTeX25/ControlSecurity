@@ -14,16 +14,17 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 
 List<Widget> _tiles = const <Widget>[
   //passing icon, icon text, custom color, navigation page
-  const MyItems(Icons.graphic_eq, "text1 Here", 0xFF42a5f5, "/first"),
-  const MyItems(Icons.graphic_eq, "text2 here", 0xFF42a5f5, "/second"),
-  const MyItems(Icons.graphic_eq, "text3 here", 0xFF42a5f5, "/third"),
-  const MyItems(Icons.graphic_eq, "text4 here", 0xFF42a5f5, "/fourth"),
+  const MyItems(Icons.graphic_eq, "text1 Here", 0xFF000000, "/first"),
+  const MyItems(Icons.graphic_eq, "text2 here", 0xFF000000, "/second"),
+  const MyItems(Icons.graphic_eq, "text3 here", 0xFF000000, "/third"),
+  const MyItems(Icons.graphic_eq, "text4 here", 0xFF000000, "/fourth"),
 ];
 
 class Dashboard extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: Text('')
@@ -37,7 +38,7 @@ class Dashboard extends StatelessWidget{
           children: _tiles,
           mainAxisSpacing: 4.0,
           crossAxisSpacing: 4.0,
-          padding: const EdgeInsets.all(4.0),
+          padding: const EdgeInsets.all(8.0),
         ),
       ),
     );
@@ -56,9 +57,9 @@ class MyItems extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Material(
-      color: Colors.white,
+      color: new Color(0xFF388E3C),
       elevation:12.0,
-      shadowColor: Color(0xff2962ff),
+      //shadowColor: Color(0xFFFFFFFF),
       borderRadius: BorderRadius.circular(20.0),
       child: Center(
         child: Padding(
@@ -75,8 +76,8 @@ class MyItems extends StatelessWidget{
                     child: Text(
                       heading,
                       style: TextStyle(
-                        color: new Color(color),
-                        fontSize: 18.0,
+                        color: Colors.black,
+                        fontSize: 20.0,
                       ),
                     ),
                   ),
@@ -89,7 +90,7 @@ class MyItems extends StatelessWidget{
                       child: IconButton(
                         icon: Icon(icon),
                         iconSize: 20.0,
-                        color: Colors.white,
+                        color: Colors.green,
                         onPressed: (){
                           Navigator.pushNamed(context, routeName);
                         },
