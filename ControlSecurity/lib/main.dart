@@ -1,5 +1,6 @@
 import 'package:ControlSecurity/bottomNav.dart';
 import 'package:ControlSecurity/bottomNav.dart';
+import 'package:ControlSecurity/dashboard.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,10 @@ class ControlSecurity extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.black,
       ),
+      initialRoute: './',
+      routes:{
+        //additional tile pages will be listed below
+      },
       home: MyHomePage(title: ''),
     );
   }
