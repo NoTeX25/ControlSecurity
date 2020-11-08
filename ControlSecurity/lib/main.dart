@@ -1,7 +1,6 @@
 import 'package:ControlSecurity/bottomNav.dart';
-import 'package:ControlSecurity/bottomNav.dart';
-import 'package:ControlSecurity/dashboard.dart';
 import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 void main() {
   runApp(ControlSecurity());
@@ -18,6 +17,7 @@ class ControlSecurity extends StatelessWidget {
       initialRoute: './',
       routes:{
         //additional tile pages will be listed below
+        "/nvd": (context) => _nvdURL(),
       },
       home: MyHomePage(title: ''),
     );
@@ -55,6 +55,9 @@ Widget _buildTopTransition(){
     ),
   );
 }
+
+
+
   @override
   //dispose of the controller state with onDispose()
   void dispose(){
@@ -92,4 +95,12 @@ Widget _buildTopTransition(){
       )
     );
   }
+}
+
+
+//url navigation listed below:
+Widget _nvdURL(){
+  return WebView(
+    initialUrl: 'https://nvd.nist.gov/' //create new tile to replace nvd 800-53 link
+  );
 }

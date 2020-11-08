@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 
-
 List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
   StaggeredTile.fit(5),
   StaggeredTile.fit(2),
@@ -14,7 +13,7 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 
 List<Widget> _tiles = const <Widget>[
   //passing icon, icon text, custom color, navigation page
-  const MyItems(Icons.graphic_eq, "text1 Here", 0xFF000000, "/first"),
+  const MyItems(Icons.graphic_eq, "NVD 800-53", 0xFF000000, "/nvd"),
   const MyItems(Icons.graphic_eq, "text2 here", 0xFF000000, "/second"),
   const MyItems(Icons.graphic_eq, "text3 here", 0xFF000000, "/third"),
   const MyItems(Icons.graphic_eq, "text4 here", 0xFF000000, "/fourth"),
@@ -106,3 +105,4 @@ class MyItems extends StatelessWidget{
     );
   }
 }
+
