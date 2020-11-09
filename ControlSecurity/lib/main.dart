@@ -17,7 +17,10 @@ class ControlSecurity extends StatelessWidget {
       initialRoute: './',
       routes:{
         //additional tile pages will be listed below
-        "/nvd": (context) => _nvdURL(),
+        "/newsURL": (context) => _nvdURL(),
+        "/stigsURL": (context) => _stigsURL(),
+        "/rmfURL": (context) => _rmfURL(),
+        "/linksURL": (context) => _linksURL(),
       },
       home: MyHomePage(title: ''),
     );
@@ -101,6 +104,21 @@ Widget _buildTopTransition(){
 //url navigation listed below:
 Widget _nvdURL(){
   return WebView(
-    initialUrl: 'https://nvd.nist.gov/' //create new tile to replace nvd 800-53 link
+    initialUrl: 'https://www.cio.com/category/security/' //create new tile to replace nvd 800-53 link
+  );
+}
+Widget _stigsURL(){
+  return WebView(
+    initialUrl: '#' //create new tile to replace nvd 800-53 link
+  );
+}
+Widget _rmfURL(){
+  return WebView(
+    initialUrl: '#' //create new tile to replace nvd 800-53 link
+  );
+}
+Widget _linksURL(){
+  return WebView(
+    initialUrl: '#' //create new tile to replace nvd 800-53 link
   );
 }

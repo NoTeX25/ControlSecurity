@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
-
 List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
   StaggeredTile.fit(5),
   StaggeredTile.fit(2),
@@ -13,10 +12,10 @@ List<StaggeredTile> _staggeredTiles = const <StaggeredTile>[
 
 List<Widget> _tiles = const <Widget>[
   //passing icon, icon text, custom color, navigation page
-  const MyItems(Icons.graphic_eq, "NVD 800-53", 0xFF000000, "/nvd"),
-  const MyItems(Icons.graphic_eq, "text2 here", 0xFF000000, "/second"),
-  const MyItems(Icons.graphic_eq, "text3 here", 0xFF000000, "/third"),
-  const MyItems(Icons.graphic_eq, "text4 here", 0xFF000000, "/fourth"),
+  const MyItems(Icons.graphic_eq, "NEWS", 0xFF000000, "/newsURL"),
+  const MyItems(Icons.graphic_eq, "STIGS", 0xFF000000, "/stigsURL"),
+  const MyItems(Icons.graphic_eq, "RMF reference", 0xFF000000, "/rmfURL"),
+  const MyItems(Icons.graphic_eq, "Useful Links", 0xFF000000, "/linksURL"),
 ];
 
 class Dashboard extends StatelessWidget{
@@ -105,4 +104,6 @@ class MyItems extends StatelessWidget{
     );
   }
 }
+
+
 
