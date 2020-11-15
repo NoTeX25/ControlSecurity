@@ -21,7 +21,7 @@ class BottomNavState extends State<BottomNav>{
   final List<Widget> _children = [
     Dashboard(),
     PlaceholderWidget(Colors.black),
-    PlaceholderWidget(Colors.black)
+    ConmonTracking(),
   ];
 
   @override
