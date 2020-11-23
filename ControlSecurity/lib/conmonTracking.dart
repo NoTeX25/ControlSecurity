@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_calendar/calendar.dart';
-
+import 'package:device_calendar/device_calendar.dart';
 
 class ConmonTracking extends StatefulWidget{
 
@@ -17,13 +16,9 @@ class ConmonTrackingState extends State<ConmonTracking>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text('ConMon Tracker')
+      body: Container(
+        color: Colors.black,
       ),
-      body: SfCalendar(
-    view: CalendarView.month,
-    monthViewSettings: MonthViewSettings(showAgenda: true),
-  ));
+    );
   }
 }
