@@ -10,14 +10,55 @@ class ConmonTracking extends StatefulWidget{
 
 
 class ConmonTrackingState extends State<ConmonTracking>{
+
+
+List<String> _conMonItems = [];
+
+  // This will be called each time the + button is pressed
+  void _addConMonItem() {
+    // Putting our code inside "setState" tells the app that our state has changed, and
+    // it will automatically re-render the list
+    setState(() {
+      int index = _conMonItems.length;
+      _conMonItems.add('Item ' + index.toString());
+    });
+  }
+
+  // Build the whole list of todo items
+  Widget _buildConMonList() {
+    return new ListView.builder(
+      itemBuilder: (context, index) {
+        // itemBuilder will be automatically be called as many times as it takes for the
+        // list to fill up its available space, which is most likely more than the
+        // number of todo items we have. So, we need to check the index is OK.
+        if(index < _conMonItems.length) {
+          return _buildTodoItem(_conMonItems[index]);
+        }
+      },
+    );
+  }
+
+
+Widget _buildTodoItem(String conMonText) {
+    return new ListTile(
+      title: new Text(conMonText)
+    );
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(""),
+    return new Scaffold(
+      appBar: new AppBar(
+        title: new Text('ConMon Tasks')
       ),
-      body: Container(
-        color: Colors.black,
+      body: _buildConMonList(),
+      floatingActionButton: new FloatingActionButton(
+        onPressed: _addConMonItem,
+        backgroundColor: Colors.green,
+        tooltip: 'Add task',
+        child: new Icon(Icons.add, color: Colors.black,)
       ),
     );
   }
