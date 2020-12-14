@@ -1,7 +1,7 @@
 import 'package:ControlSecurity/bottomNav.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import 'package:device_calendar/device_calendar.dart';
+import 'package:calendar_strip/calendar_strip.dart';
 
 void main() {
   runApp(ControlSecurity());
@@ -32,7 +32,6 @@ class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
   //Fields in a Widget subclass are always marked "final".
-
   final String title;
 
   @override
