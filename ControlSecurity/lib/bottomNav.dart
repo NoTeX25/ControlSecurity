@@ -44,7 +44,7 @@ class BottomNavState extends State<BottomNav>{
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.calendar_today),
-            title: new Text('Calendar'),
+            title: new Text('Todo List'),
           ),
         ],
       ),
