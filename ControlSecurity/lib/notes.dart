@@ -15,9 +15,21 @@ class NotesState extends State<Notes>{
 
   @override
   Widget build(BuildContext context){
-    return Scaffold(
+    return new Scaffold(
+      backgroundColor: Colors.white,
+      appBar: new AppBar(
+        backgroundColor: Colors.green,
+        title: new Text('Notes', style: TextStyle(
+          color: Colors.black),
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20),
+          ),
+        ),
+      ),
       body: Container(
-        color: Colors.blue,
+        color: Colors.white,
       ),
     );
   }

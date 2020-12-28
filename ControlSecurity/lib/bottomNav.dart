@@ -20,7 +20,7 @@ class BottomNavState extends State<BottomNav>{
   int _currentIndex = 0;
   final List<Widget> _children = [
     Dashboard(),
-    PlaceholderWidget(Colors.black),
+    Notes(),
     ConmonTracking(),
   ];
 
@@ -29,24 +29,43 @@ class BottomNavState extends State<BottomNav>{
     return Scaffold(
       backgroundColor: Colors.black,
       body: _children[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(40),
+            topRight: Radius.circular(40),
+          ),
+          //boxShadow can be placed here:
+        ),
+        child: ClipRRect(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25),
+            topRight: Radius.circular(25),
+          ),
+          child: BottomNavigationBar(
         onTap: onTabTapped,
         backgroundColor: Colors.green,
         currentIndex: _currentIndex,
         items: [
           BottomNavigationBarItem(
+            
             icon: new Icon(Icons.home),
+            // ignore: deprecated_member_use
             title: new Text('Home'),
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.note),
+            // ignore: deprecated_member_use
             title: new Text('Notes'),
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.calendar_today),
+            // ignore: deprecated_member_use
             title: new Text('Todo List'),
           ),
         ],
+      ),
+        ),
       ),
     );
   }
