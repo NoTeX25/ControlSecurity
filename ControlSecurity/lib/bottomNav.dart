@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import './placeholder_widget.dart';
 import './dashboard.dart';
 import './conmonTracking.dart';
 import './notes.dart';
@@ -17,7 +16,16 @@ class BottomNav extends StatefulWidget{
 
 
 class BottomNavState extends State<BottomNav>{
+  
+  
   int _currentIndex = 0;
+  
+  void onTabTapped(int index){
+    setState((){
+      _currentIndex = index;
+    });
+  }
+  
   final List<Widget> _children = [
     Dashboard(),
     Notes(),
@@ -28,7 +36,10 @@ class BottomNavState extends State<BottomNav>{
   Widget build(BuildContext context){
     return Scaffold(
       backgroundColor: Colors.black,
-      body: _children[_currentIndex],
+      body: IndexedStack(
+        index: _currentIndex,
+        children: _children,
+      ),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
@@ -68,11 +79,5 @@ class BottomNavState extends State<BottomNav>{
         ),
       ),
     );
-  }
-
-  void onTabTapped(int index){
-    setState((){
-      _currentIndex = index;
-    });
   }
 }

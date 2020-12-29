@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import './bottomNav.dart';
 
 
 
 class ConmonTracking extends StatefulWidget{
-  
-
   @override
   State<StatefulWidget> createState(){
     return ConmonTrackingState();
@@ -71,14 +70,12 @@ Widget _buildConMonList() {
 }
 
 
-Widget _buildConMonItem(String todoText, int index) {
+Widget _buildConMonItem(String conMonText, int index) {
   return new ListTile(
-    title: new Text(todoText),
-    onTap: () => _promptRemoveConMonItem(index)
+    title: new Text(conMonText),
+    onTap: () => _promptRemoveConMonItem(index),
   );
 }
-
-
 
   @override
   Widget build(BuildContext context) {

@@ -14,7 +14,7 @@ List<Widget> _tiles = const <Widget>[
   //passing icon, icon text, custom color, navigation page
   const MyItems(Icons.graphic_eq, "NEWS", 0xFF000000, "/newsURL"),
   const MyItems(Icons.graphic_eq, "STIGS", 0xFF000000, "/stigsURL"),
-  const MyItems(Icons.graphic_eq, "RMF reference", 0xFF000000, "/rmfURL"),
+  const MyItems(Icons.graphic_eq, "RMF", 0xFF000000, "/rmfURL"),
   const MyItems(Icons.graphic_eq, "Useful Links", 0xFF000000, "/linksURL"),
 ];
 
