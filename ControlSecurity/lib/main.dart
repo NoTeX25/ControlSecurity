@@ -110,12 +110,12 @@ Widget _nvdURL(){
 }
 Widget _stigsURL(){
   return WebView(
-    initialUrl: '#' //create new tile to replace nvd 800-53 link
+    initialUrl: 'https://public.cyber.mil/stigs/srg-stig-tools/' //create new tile to replace nvd 800-53 link
   );
 }
 Widget _rmfURL(){
   return WebView(
-    initialUrl: '#' //create new tile to replace nvd 800-53 link
+    initialUrl: 'https://csrc.nist.gov/Projects/risk-management/sp800-53-controls/release-search#!/families?version=5.1' //create new tile to replace nvd 800-53 link
   );
 }
 Widget _linksURL(){
